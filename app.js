@@ -10,11 +10,14 @@ async function getData() {
     console.log(error);
   }
 }
-getData();
+document.addEventListener("DOMContentLoaded", function () {
+  getData();
+});
 
 function displayAdd(data = []) {
   result.innerHTML = "";
-  result.classList = "bg-gray-200  p-4 grid grid-cols-1 sm:grid-cols-2   md:grid-cols-3  gap-4"
+  result.classList =
+    "bg-gray-200  p-4 grid grid-cols-1 sm:grid-cols-2   md:grid-cols-3  gap-4";
   data.forEach((item) => {
     let div = document.createElement("div");
 
@@ -65,8 +68,7 @@ async function addDisplay(id) {
 }
 
 function AddSingle(item = {}) {
-  result.classList =
-    "bg-gray-200 w-full flex items-center justify-center";
+  result.classList = "bg-gray-200 w-full flex items-center justify-center";
   result.innerHTML = `
     <div class="max-w-sm mx-auto my-8 p-4 shadow-lg rounded-lg overflow-hidden bg-white">
     <img class="w-full h-auto object-cover" src="${item.image}" alt="${item.title}">

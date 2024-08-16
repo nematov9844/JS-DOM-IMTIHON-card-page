@@ -66,10 +66,10 @@ async function addDisplay(id) {
 
 function AddSingle(item = {}) {
   result.classList =
-    "bg-gray-200 h-screen w-full flex items-center justify-center";
+    "bg-gray-200 w-full flex items-center justify-center";
   result.innerHTML = `
     <div class="max-w-sm mx-auto my-8 p-4 shadow-lg rounded-lg overflow-hidden bg-white">
-    <img class="w-full h-[450px] object-cover" src="${item.image}" alt="${item.title}">
+    <img class="w-full h-auto object-cover" src="${item.image}" alt="${item.title}">
     <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">${item.title}</div>
         <p class="text-gray-700 text-base">

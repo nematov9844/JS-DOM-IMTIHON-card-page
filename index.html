@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Card</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FakeStore API Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div id="result"></div>
-    <script src="./app.js"></script>
+<body class="bg-gray-100 p-8">
+
+  <h1 class="text-3xl font-bold mb-8 text-center">Shopping</h1>
+
+  <div class="mb-4 gap-3 flex justify-start items-center">
+    <input id="search-input" type="text" placeholder="Qidiruv..." class="px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+    
+    <select id="category-select" class="px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <option value="">Hammasi</option>
+      <option value="men's clothing">Men's Clothing</option>
+      <option value="women's clothing">Women's Clothing</option>
+      <option value="jewelery">Jewelery</option>
+      <option value="electronics">Electronics</option>
+    </select>
+  </div>
+
+  <div id="card-container" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6"></div>
+  <div id="card-detail" class="hidden"></div>
+
+  <script src="./app.js"></script>
+
 </body>
-
-
 </html>
